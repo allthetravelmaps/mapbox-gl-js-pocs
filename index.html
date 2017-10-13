@@ -1,79 +1,79 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset='utf-8' />
-    <title>Mapbox GL JS & OpenMapTiles Styles Example</title>
-    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.29.0/mapbox-gl.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.29.0/mapbox-gl.css' rel='stylesheet' />
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-        }
-        #map {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            width: 100%;
-        }
-        #style-chooser {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background-color: lightgrey;
-            padding: 0 10px 0 10px;
-            border: 1px solid black;
-        }
-        #style-chooser ul {
-            list-style: none;
-            margin: 0;
-            padding-left: 10px;
-        }
-        #style-chooser li {
-            margin: 5px 0 5px 0;
-        }
-        #style-chooser input {
-            margin-right: 5px;
-        }
-        #style-chooser h3 {
-            margin: 10px 0 10px 0;
-        }
-    </style>
+  <meta charset='utf-8' />
+  <title>Mapbox GL JS & OpenMapTiles Styles Example</title>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.29.0/mapbox-gl.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.29.0/mapbox-gl.css' rel='stylesheet' />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    #map {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+    }
+    #style-chooser {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-color: lightgrey;
+      padding: 0 10px 0 10px;
+      border: 1px solid black;
+    }
+    #style-chooser ul {
+      list-style: none;
+      margin: 0;
+      padding-left: 10px;
+    }
+    #style-chooser li {
+      margin: 5px 0 5px 0;
+    }
+    #style-chooser input {
+      margin-right: 5px;
+    }
+    #style-chooser h3 {
+      margin: 10px 0 10px 0;
+    }
+  </style>
 </head>
 <body>
-    <div id='map'></div>
-    <div id='style-chooser'>
-        <h3>OpenMapTiles Styles</h3>
-        <ul>
-            <li><label><input type='radio' name='s' value='positron-gl-style' checked>Positron</label></li>
-            <li><label><input type='radio' name='s' value='dark-matter-gl-style'>Dark Matter</label></li>
-            <li><label><input type='radio' name='s' value='osm-bright-gl-style'>OSM Bright</label></li>
-            <li><label><input type='radio' name='s' value='klokantech-basic-gl-style'>Klokantech Basic</label></li>
-            <li><label><input type='radio' name='s' value='klokantech-3d-gl-style'>Klokantech 3d</label></li>
-            <li><label><input type='radio' name='s' value='klokantech-terrain-gl-style'>Klokantech Terrain</label></li>
-            <li><label><input type='radio' name='s' value='fiord-color-gl-style'>Fiord Color</label></li>
-            <li><label><input type='radio' name='s' value='toner-gl-style'>Toner</label></li>
-        </ul>
-    </div>
-    <script>
-        var map = new mapboxgl.Map({
-            container: 'map',
-            style: 'https://openmaptiles.github.io/positron-gl-style/style-cdn.json',
-            center: [8.5456, 47.3739],
-            zoom: 11
-        });
-        var styleHost = 'https://openmaptiles.github.io';
-        var styleFile = 'style-cdn.json'
-        function displayStyle (evt) {
-            var styleRepo = evt.target.value;
-            var styleUrl = styleHost + '/' + styleRepo + '/' + styleFile;
-            map.setStyle(styleUrl);
-        };
-        var styleInputs = document.getElementsByName('s');
-        styleInputs.forEach(function (styleInput) {
-            styleInput.addEventListener('click', displayStyle);
-        });
-    </script>
+  <div id='map'></div>
+  <div id='style-chooser'>
+    <h3>OpenMapTiles Styles</h3>
+    <ul>
+      <li><label><input type='radio' name='s' value='positron-gl-style' checked>Positron</label></li>
+      <li><label><input type='radio' name='s' value='dark-matter-gl-style'>Dark Matter</label></li>
+      <li><label><input type='radio' name='s' value='osm-bright-gl-style'>OSM Bright</label></li>
+      <li><label><input type='radio' name='s' value='klokantech-basic-gl-style'>Klokantech Basic</label></li>
+      <li><label><input type='radio' name='s' value='klokantech-3d-gl-style'>Klokantech 3d</label></li>
+      <li><label><input type='radio' name='s' value='klokantech-terrain-gl-style'>Klokantech Terrain</label></li>
+      <li><label><input type='radio' name='s' value='fiord-color-gl-style'>Fiord Color</label></li>
+      <li><label><input type='radio' name='s' value='toner-gl-style'>Toner</label></li>
+    </ul>
+  </div>
+  <script>
+    var map = new mapboxgl.Map({
+      container: 'map',
+      style: 'https://openmaptiles.github.io/positron-gl-style/style-cdn.json',
+      center: [8.5456, 47.3739],
+      zoom: 11
+    });
+    var styleHost = 'https://openmaptiles.github.io';
+    var styleFile = 'style-cdn.json'
+    function displayStyle (evt) {
+      var styleRepo = evt.target.value;
+      var styleUrl = styleHost + '/' + styleRepo + '/' + styleFile;
+      map.setStyle(styleUrl);
+    };
+    var styleInputs = document.getElementsByName('s');
+    styleInputs.forEach(function (styleInput) {
+      styleInput.addEventListener('click', displayStyle);
+    });
+  </script>
 </body>
 </html>
