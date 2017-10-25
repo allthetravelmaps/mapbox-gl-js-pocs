@@ -1,8 +1,3 @@
-# Mapbox GL JS & OpenMapTiles Styles Example
+# Mapbox GL JS Proof-of-concepts
 
-A short demo project exploring how to use [Mapbox GL JS](https://github.com/mapbox/mapbox-gl-js) and [OpenMapTiles styles](https://openmaptiles.org/styles/) together. Features:
-
- * Allows for a user to switch between a list of available OpenMapTiles styles.
- * Has a couple map controls.
-
-Check it out live [here](https://travelmapaddict.github.io/mapbox-gl-js-openmaptiles-styles-example/).
+A series of short POC's to ensure [Mapbox GL JS](https://github.com/mapbox/mapbox-gl-js) can do what I need it to do.
