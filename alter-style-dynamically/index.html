@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8' />
+  <title>Mapbox GL JS & Altering a Style dynamically POC</title>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.41.0/mapbox-gl.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.41.0/mapbox-gl.css' rel='stylesheet' />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    #map {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+    }
+    #style-chooser {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background-color: lightgrey;
+      padding: 0 10px 0 10px;
+      border: 1px solid black;
+    }
+    #style-chooser ul {
+      list-style: none;
+      margin: 0;
+      padding-left: 10px;
+    }
+    #style-chooser li {
+      margin: 5px 0 5px 0;
+    }
+    #style-chooser input {
+      margin-right: 5px;
+    }
+    #style-chooser h3 {
+      margin: 10px 0 10px 0;
+    }
+  </style>
+</head>
+<body>
+  <div id='map'></div>
+  <div id='style-chooser'>
+    <h3>Pick yer colors</h3>
+    <ul>
+      <li><label><input type='radio' name='s' value='#00483A/#FFBE00' checked>A's</label></li>
+      <li><label><input type='radio' name='s' value='#003DA5/#FFC72D'>Warriors</label></li>
+      <li><label><input type='radio' name='s' value='#FB5B1F/#FFFFFF'>Giants</label></li>
+    </ul>
+  </div>
+  <script>
+    var map = new mapboxgl.Map({
+      container: 'map',
+      hash: true,
+      center: [-122.7290, 37.7848],
+      zoom: 10,
+      style: {
+        "version": 8,
+        "sources": {
+          "sf": {
+            "type": "geojson",
+            "data": "sf.geojson"
+          }
+        },
+        "layers": [
+          {
+            "id": "sf",
+            "type": "fill",
+            "source": "sf",
+          }
+        ]
+      }
+    });
+    map.addControl(new mapboxgl.FullscreenControl(), 'top-right');
+    map.addControl(new mapboxgl.NavigationControl(), 'bottom-right');
+    map.addControl(new mapboxgl.GeolocateControl({}), 'bottom-right');
+    map.addControl(new mapboxgl.ScaleControl({}), 'bottom-left');
+    function displayStyle (evt) {
+      var colors = evt.target.value.split('/');
+      var style = map.getStyle();
+      style.layers[0].paint = {
+        'fill-color': colors[0],
+        'fill-outline-color': colors[1]
+      };
+      map.setStyle(style);
+    };
+    var styleInputs = document.getElementsByName('s');
+    styleInputs.forEach(function (styleInput) {
+      styleInput.addEventListener('click', displayStyle);
+      if (styleInput.checked) map.on('load', () => displayStyle({target: styleInput}));
+    });
+  </script>
+</body>
+</html>
