@@ -6,4 +6,4 @@ It appears the map engine isn't automagically watching the style object for chan
 
 Hopefully the map engine is being smart about what it chooses to redraw or not on the page based on a diff between the previous style and the new one.
 
-Check it out live [here](https://travelmapaddict.github.io/mapbox-gl-js-pocs/alter-style-dynamically/).
+Check it out live [here](https://allthetravelmaps.github.io/mapbox-gl-js-pocs/alter-style-dynamically/).

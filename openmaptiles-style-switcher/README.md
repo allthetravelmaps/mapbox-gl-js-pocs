@@ -5,4 +5,4 @@ A POC exploring how to use [Mapbox GL JS](https://github.com/mapbox/mapbox-gl-js
  * Allows for a user to switch between a list of available OpenMapTiles styles.
  * Has a couple map controls.
 
-Check it out live [here](https://travelmapaddict.github.io/mapbox-gl-js-pocs/openmaptiles-style-switcher/).
+Check it out live [here](https://allthetravelmaps.github.io/mapbox-gl-js-pocs/openmaptiles-style-switcher/).
