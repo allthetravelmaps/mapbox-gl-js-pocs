@@ -1,0 +1,12 @@
+{
+    "name": "build/comunas-of-buenos-aires.mbtiles",
+    "description": "build/comunas-of-buenos-aires.mbtiles",
+    "version": "2",
+    "minzoom": "0",
+    "maxzoom": "10",
+    "center": "-58.531459,-34.705637,10",
+    "bounds": "-58.710938,-34.885931,-58.007813,-34.307144",
+    "type": "overlay",
+    "format": "pbf",
+    "json": "{\"vector_layers\": [ { \"id\": \"comunas-of-buenos-aires\", \"description\": \"\", \"minzoom\": 1, \"maxzoom\": 10, \"fields\": {\"admin_level\": \"String\", \"boundary\": \"String\", \"id\": \"Number\", \"name\": \"String\", \"type\": \"String\", \"wikidata\": \"String\", \"wikipedia\": \"String\"} } ],\"tilestats\": {\"layerCount\": 1,\"layers\": [{\"layer\": \"comunas-of-buenos-aires\",\"count\": 148,\"geometry\": \"Polygon\",\"attributeCount\": 7,\"attributes\": [{\"attribute\": \"admin_level\",\"count\": 1,\"type\": \"string\",\"values\": [\"5\"]},{\"attribute\": \"boundary\",\"count\": 1,\"type\": \"string\",\"values\": [\"administrative\"]},{\"attribute\": \"id\",\"count\": 15,\"type\": \"number\",\"values\": [42381684,42390284,42392314,42402394,42403164,42565104,42567314,42568264,42568784,42578954,42603784,42604194,42608354,42609054,42610294],\"min\": 42381684,\"max\": 42610294},{\"attribute\": \"name\",\"count\": 15,\"type\": \"string\",\"values\": [\"Comuna 1\",\"Comuna 10\",\"Comuna 11\",\"Comuna 12\",\"Comuna 13\",\"Comuna 14\",\"Comuna 15\",\"Comuna 2\",\"Comuna 3\",\"Comuna 4\",\"Comuna 5\",\"Comuna 6\",\"Comuna 7\",\"Comuna 8\",\"Comuna 9\"]},{\"attribute\": \"type\",\"count\": 1,\"type\": \"string\",\"values\": [\"boundary\"]},{\"attribute\": \"wikidata\",\"count\": 15,\"type\": \"string\",\"values\": [\"Q17488660\",\"Q17499403\",\"Q27894563\",\"Q27894582\",\"Q27894595\",\"Q5482069\",\"Q5685958\",\"Q5780312\",\"Q5780320\",\"Q5780324\",\"Q5780334\",\"Q5780360\",\"Q5780369\",\"Q5780392\",\"Q5780399\"]},{\"attribute\": \"wikipedia\",\"count\": 14,\"type\": \"string\",\"values\": [\"es:Comuna 1 (Ciudad de Buenos Aires)\",\"es:Comuna 10 (Ciudad de Buenos Aires)\",\"es:Comuna 11 (Ciudad de Buenos Aires)\",\"es:Comuna 12 (Ciudad de Buenos Aires)\",\"es:Comuna 13 (Ciudad de Buenos Aires)\",\"es:Comuna 15 (Ciudad de Buenos Aires)\",\"es:Comuna 2 (Ciudad de Buenos Aires)\",\"es:Comuna 3 (Ciudad de Buenos Aires)\",\"es:Comuna 4 (Ciudad de Buenos Aires)\",\"es:Comuna 5 (Ciudad de Buenos Aires)\",\"es:Comuna 6 (Ciudad de Buenos Aires)\",\"es:Comuna 7 (Ciudad de Buenos Aires)\",\"es:Comuna 8 (Ciudad de Buenos Aires)\",\"es:Comuna 9 (Ciudad de Buenos Aires)\"]}]}]}}"
+}
