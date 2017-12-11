@@ -23,6 +23,8 @@
   <div id='map'></div>
   <script>
     var styleBase = window.location.origin + window.location.pathname;
+    // To use a publicly available google storage bucket:
+    // styleBase = 'https://storage.googleapis.com/my-buckets-unique-name/';
     var map = new mapboxgl.Map({
       container: 'map',
       hash: true,
