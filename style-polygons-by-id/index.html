@@ -37,25 +37,38 @@
         },
         "layers": [
           {
-            "id": "sf",
+            "id": "giants-fill",
             "type": "fill",
             "source": "sf-alameda",
             "filter": ["==", "id", 3964874],
             "paint": {
-              "fill-color": "#fb5b1f",
-              "fill-outline-color": "#ffffff"
+              "fill-opacity": 0.5,
+              "fill-color": "#fb5b1f"
             }
           },
           {
-            "id": "alameda",
+            "id": "as-fill",
             "type": "fill",
             "source": "sf-alameda",
             "filter": ["==", "id", 3964994],
             "paint": {
-              "fill-color": "#00483a",
-              "fill-outline-color": "#ffbe00"
+              "fill-opacity": 0.5,
+              "fill-color": "#00483a"
             }
-          }
+          },
+          {
+            "id": "both-line",
+            "type": "line",
+            "source": "sf-alameda",
+            "filter": ["in", "id", 3964874, 3964994],
+            "layout": {
+              "line-join": "round"
+            },
+            "paint": {
+              "line-color": "#000000",
+              "line-width": 8
+            }
+          },
         ]
       }
     });
